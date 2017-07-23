@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Nectar foundation</title>
+    <link rel="icon" href="../logotrans.jpg">
+    <link rel="stylesheet" id="font-awesome-four-css" href="../../../assets/css/font-awesome-4-menus/css/font-awesome.min.css" type="text/css" media="all">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../../assets/css/style.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../../../assets/css/colors.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../../../assets/css/animate-custom.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../../../assets/css/animations.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../../../assets/css/responsiveslides.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../../../assets/css/edit.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="responsiveslides-css" href="../../../assets/css/responsiveslides.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="reponsive-css" href="../../../assets/css/reponsive.min.css" type="text/css" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Lobster%7CReem+Kufi" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script async type="text/javascript" src="../../../assets/js/modernizr.custom.js"></script>
+    <script async type="text/javascript" src="../../../assets/js/jquery/jquery.min.js"></script>
+    <script async type="text/javascript" src="../../../assets/js/jquery/jquery-migrate.min.js"></script>
+    <script async type="text/javascript" src="../../../assets/js/foundation.min.js"></script>
+    <script type="text/javascript" src="../../../assets/js/modernizr.custom.js"></script>
+    <script async type="text/javascript" src="../../../assets/js/foundation/foundation.section.min.js"></script>
+    <script async type="text/javascript" src="../../../assets/js/responsiveslides.min.js"></script>
+    <script async type="text/javascript" src="../../../assets/js/scripts.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../../../assets/js/dropzone.min.js"></script>
+    <script src="ea.min.js"></script>
+    <script>
+                $(document).ready(function() {
+                    var moha = 0;
+                    if (moha == 0) {
+                        $('body').click(function() {
+                            $.ajax({
+                                url: '../../ch.php',
+                                success: function(data) {
+                                    if (data == 1) {
+                                        sp = document.getElementsByClassName("sp");
+                                        moha = 1;
+                                        var i;
+                                        for (i = 0; i < sp.length; i++) {
+                                            sp[i].style.visibility = "visible";
+                                        }
+                                    }
+                                    else {
+                                        sp = document.getElementsByClassName("sp");
+                                        moha = 1;
+                                        var i;
+                                        for (i = 0; i < sp.length; i++) {
+                                            sp[i].style.visibility = "hidden";
+                                        }
+                                    }
+                                }
+        
+                            });
+                        });
+                    }
+                });
+
+
+        $(document).ready(function() {
+            $('.fa-window-close').click(function() {
+                var e = $(this).parent().attr("id");
+                var max = $(this).parent().parent().attr("id");
+                alert("DS")
+                $.ajax({
+                    url: 'news_d.php',
+                    type: 'GET',
+                    data: {
+                        e: e,
+                        max: max
+                    },
+                    success: function(data) {
+                        alert(data);
+
+                    }
+                });
+                setTimeout(function() {
+                    location.reload();
+                }, 500);
+
+            })
+
+            $('.edSave').click(function() {
+                setTimeout(function() {
+                    location.reload();
+                }, 500);
+            })
+            $('#brn1').click(function() {
+                setTimeout(function() {
+                    location.reload();
+                }, 500);
+            })
+        })
+
+    </script>
+</head>
+
+<body bgcolor="#3495f3">
+    <style>
+        body {
+            background-color: #3495f3;
+        }
+        
+        table {
+            width: 100%;
+        }
+        
+        ul {
+            margin-top: 50px;
+        }
+        
+        #flot {
+            max-height: 400px;
+            overflow: scroll;
+        }
+
+    </style>
+    <button class="sp" style="background: #EE4400;z-index: 100;position: fixed;right: 0;"><a href="../../log_out.php">log out</a></button>
+    <ul id="p8">
+        <li id="a1">
+            <i class="fa fa-ellipsis-v sp" aria-hidden="true"></i>
+            <i class="fa fa-pencil-square-o sp" aria-hidden="true" onclick="edit(this)"></i>
+            <i class="fa fa-window-close sp" aria-hidden="true" onclick=""></i>
+            <br>
+            <div class="button-container-2 edit_b">
+                <span class="mas">Save</span><button class="edSave" type="button" name="Hover">Save</button>
+            </div>
+            <div class="button-container-1 edit_b">
+                <span class="mas">Cancle</span><button onclick="edit_cancel(this)" type="button" name="Hover">Cancle</button>
+            </div>
+            <table>
+                <tr>
+                    <td>
+                        <figure><img src="../../../assets/images/ISEF.png" alt="Isef" width="100" height="100">
+                            <figcaption>Intel Isef</figcaption>
+                        </figure>
+                    </td>
+                    <td>
+                        <h3>Intel Isef: ds</h3>
+                        <p>Each year, more than 7 million high school students around the globe develop original research projects and present their work at local science competitions with the hope of making it to the Intel International Science and Engineering Fair, a program of Society for Science &amp; the Public. Approximately 1,700 winners of local, regional, state, and national competitions&acirc;&euro;&rdquo;are invited to participate in this week-long celebration of science, technology, engineering, and math. At the event, these young innovators share ideas, showcase cutting-edge research, and compete for more than USD 4 million in awards and scholarships..</p>
+                        <a href="https://www.intel.com/content/www/us/en/education/competitions/international-science-and-engineering-fair.html" target="czxv_blank">(Click here to go to Intel Isef page) ds</a>
+                    </td>
+                </tr>
+            </table>
+        </li>
+
+
+
+
+
+
+
+    </ul>
+    <i class="fa fa-plus-circle sp" aria-hidden="true" onclick="dis()" id="add"></i>
+    <div id="flot">
+        <div>
+            <form action="../../upload.php" class="dropzone" id="myDropzone"></form>
+            <span>Name</span><input id="h_3" type="text"><br><span>figcaption</span><input id="figcaption" type="text"><br><span>Data</span><textarea id="par" type="text"></textarea><br><span>Link Data</span><textarea id="a" type="text"></textarea><br><span>Link</span><textarea id="asrc" type="text"></textarea><br><button onclick="brn()" id="brn1">Save</button>
+            <button onclick="cancel()">Calncel</button>
+        </div>
+    </div>
+</body>
+
+</html>

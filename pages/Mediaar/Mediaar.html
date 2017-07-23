@@ -1,0 +1,252 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>NECTAR foundation</title>
+    <link rel="icon" href="../../logotrans.jpg">
+    <link rel="stylesheet" id="font-awesome-four-css" href="../../assets/css/font-awesome-4-menus/css/font-awesome.min.css" type="text/css" media="all">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../assets/css/style.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../../assets/css/colors.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../../assets/css/edit.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="responsiveslides-css" href="../../assets/css/responsiveslides.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="reponsive-css" href="../../assets/css/reponsive.min.css" type="text/css" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Lobster%7CReem+Kufi" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <!--- <script src="ea.js"></script>--->
+    <script>
+        $(document).ready(function() {
+            var moha = 0;
+            if (moha == 0) {
+                $('body').click(function() {
+                    $.ajax({
+                        url: '../ch.php',
+                        success: function(data) {
+                            if (data == 1) {
+                                sp = document.getElementsByClassName("sp");
+                                moha = 1;
+                                var i;
+                                for (i = 0; i < sp.length; i++) {
+                                    sp[i].style.visibility = "visible";
+                                }
+                            } else {
+                                sp = document.getElementsByClassName("sp");
+                                moha = 1;
+                                var i;
+                                for (i = 0; i < sp.length; i++) {
+                                    sp[i].style.visibility = "hidden";
+                                }
+                            }
+                        }
+
+                    });
+                });
+            }
+        });
+        $(document).ready(function() {
+            $('.fa-window-close').click(function() {
+                var e = $(this).parent().attr("id")
+                var max = $(this).parent().parent().attr("id")
+                alert(e)
+                alert(max)
+                alert("DS")
+                $.ajax({
+                    url: 'Industry_d.php',
+                    type: 'GET',
+                    data: {
+                        e: e,
+                        max: max
+                    },
+                    success: function(data) {
+                        alert(data);
+
+                    }
+                });
+                setTimeout(function() {
+                    location.reload();
+                }, 500);
+
+            })
+
+            $('.edSave').click(function() {
+                setTimeout(function() {
+                    location.reload();
+                }, 500);
+            })
+            $('#brn2').click(function() {
+                setTimeout(function() {
+                    location.reload();
+                }, 500);
+            })
+            $('#brn1').click(function() {
+                setTimeout(function() {
+                    location.reload();
+                }, 500);
+            })
+        })
+
+        function gallary_magic(title) {
+            var data = "";
+            switch (title) {
+                case 0:
+                    data = '{ "x":3,"urls_main":["../../assets/images/1.jpg","../../assets/images/2.jpg","../../assets/images/3.jpg"] , "urls_disp": ["../../assets/images/1.jpg","../../assets/images/2.jpg","../../assets/images/3.jpg"], "data_im":["TXT4","TXT5","TXT6"], "txt":["TXT4","TXT5","TXT6"]}';
+                    break;
+            }
+            // Store
+            localStorage.setItem("data", data);
+        }
+
+    </script>
+</head>
+
+
+<body>
+
+    <!--<body onload="alert($(document).height());">-->
+    <style>
+        section {
+            overflow-y: scroll;
+        }
+        
+        .large-4 {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        
+        [class*="column"]+[class*="column"]:last-child {
+            float: left;
+        }
+        p a{
+            color: #fff;
+        }
+         p a:hover{
+            color: #fff;
+        }
+    </style>
+    <section class="page-section Media-page page-section-41 en" id="Media" style="visibility: visible;min-height: 100%;height: auto;">
+        <div class="row clear-fix">
+            <div class="row  blog-page">
+                <div class="view view-blog view-id-blog view-display-id-block view-dom-id-0c4bf026824ced108c3a32120e9abc56">
+                    <div class="view-content">
+                        <!-- Poste -->
+                        <ul id="i-scroll" class="small-block-grid-1 large-block-grid-3">
+                            <li onclick="gallary_magic(0)">
+                                <article class="article">
+                                    <a href="no.html"  target="_blank" title="UNESCO IBSP Program">
+                                        <img width="800" height="380" src="../logotrans.jpg" alt="Nectar logo" />
+                                    </a>
+                                    <div class="post-body">
+                                        <h2 class="entxt"><a href="no.html"  target="_blank" >UNESCO IBSP Program:</a></h2>
+                                        <p class="entxt"><a href="no.html"  target="_blank" >Prepared a comprehensive technical report for the science education internet portal. The portal will include different modules as Inquiry-Based science education, research methodology and projects, and basic science education.</a></p>
+                                    </div>
+                                </article>
+                            </li>
+                            <li onclick="gallary_magic(0)">
+                                <article class="article">
+                                    <a href="no.html"  target="_blank" title="USA Visit">
+                                        <img width="800" height="380" src="../../assets/images/Pennsylvania%20State%20University1.JPG" alt="USA Visit" />
+                                    </a>
+                                    <div class="post-body">
+                                        <h2 class="entxt"><a href="no.html"  target="_blank" >USA Visit:</a></h2>
+                                        <p class="entxt"><a href="no.html"  target="_blank" >Visit the center for Nanotechnology Education and Utilization (CNEU) and the National Science Foundation’s (NSF) Nanotechnology Application and Career Knowledge (NACK) Network at the Pennsylvania State University, to discuss possible collaboration with the CNEU in developing graduate educational programs for students and technical staff in Egypt and Middle East. In addition, opportunities of promoting nanotechnology education in local universities have been explored</a></p>
+                                    </div>
+                                </article>
+                            </li>
+                            <li onclick="gallary_magic(0)">
+                                <article class="article">
+                                    <a href="no.html"  target="_blank" title="UNESCO / MOHE High Level Forum">
+                                        <img width="800" height="380" src="../../assets/images/2.jpg" alt="UNESCO / MOHE High Level Forum" />
+                                    </a>
+                                    <div class="post-body">
+                                        <h2 class="entxt"><a href="no.html"  target="_blank" >UNESCO / MOHE High Level Forum:</a></h2>
+                                        <p class="entxt"><a href="no.html"  target="_blank" >NECTAR foundation represented the Egyptian specialized NGOs on Education and research field during the round table discussion about “Galvanizing Higher Education &amp; Scientific Research towards an Innovation Economy”</a></p>
+                                    </div>
+                                </article>
+                            </li>
+                            <li onclick="gallary_magic(0)">
+                                <article class="article">
+                                    <a href="no.html"  target="_blank" title="UNESCO / MOHE High Level Forum">
+                                        <img width="800" height="380" src="../../assets/images/2.jpg" alt="UNESCO / MOHE High Level Forum" />
+                                    </a>
+                                    <div class="post-body">
+                                        <h2 class="entxt"><a href="no.html"  target="_blank">UNESCO / MOHE High Level Forum:</a></h2>
+                                        <p class="entxt"><a href="no.html"  target="_blank" >NECTAR foundation represented the Egyptian specialized NGOs on Education and research field during the round table discussion about “Galvanizing Education towards a Knowledge-based Economy"</a></p>
+                                    </div>
+                                </article>
+                            </li>
+                            <li onclick="gallary_magic(0)">
+                                <article class="article">
+                                    <a href="no.html"  target="_blank" title="ISC Arab – Qatar">
+                                        <img width="800" height="380" src="../logotrans.jpg" alt="ISC Arab – Qatar" />
+                                    </a>
+                                    <div class="post-body">
+                                        <h2 class="entxt"><a href="no.html"  target="_blank" >ISC Arab – Qatar:</a></h2>
+                                        <p class="entxt"><a href="no.html"  target="_blank" >Dr. Ehab Barakat (NFD FOUNDER) co-chairing the judges committee, leading and training the judges through an induction session, and nominated to winners.</a></p>
+                                    </div>
+                                </article>
+                            </li>
+                            <li onclick="gallary_magic(0)">
+                                <article class="article">
+                                    <a href="no.html"  target="_blank" title="Intel ISEF – Egypt">
+                                        <img width="800" height="380" src="../../assets/images/Announcing%20winners.JPG" alt="Intel ISEF – Egypt" />
+                                    </a>
+                                    <div class="post-body">
+                                        <h2 class="entxt"><a href="no.html"  target="_blank" >Intel ISEF – Egypt:</a></h2>
+                                        <p class="entxt"><a href="no.html"  target="_blank" >NECTAR judging team assigned to manage and lead the judging committee, appraising the wining projects nominated to Intel ISEF 2015 and preparing the Intel ISEF 2015 finalist.</a></p>
+                                    </div>
+                                </article>
+                            </li>
+                            <li onclick="gallary_magic(0)">
+                                <article class="article">
+                                    <a href="no.html"  target="_blank" title="Intel ISEF – Upper Egypt">
+                                        <img width="800" height="380" src="../../assets/images/13.jpg" alt="Intel ISEF – Upper Egypt" />
+                                    </a>
+                                    <div class="post-body">
+                                        <h2 class="entxt"><a href="../../gallary/Intel-ISEF–Egypt.html">Intel ISEF – Upper Egypt:</a></h2>
+                                        <p class="entxt"><a href="no.html"  target="_blank" >NECTAR judging team assigned to manage and lead the judging committee, appraising the wining projects nominated to Intel ISEF 2015 and preparing the Intel ISEF 2015 finalist.</a></p>
+                                    </div>
+                                </article>
+                            </li>
+                            <li onclick="gallary_magic(0)">
+                                <article class="article">
+                                    <a href="no.html"  target="_blank" title="Qatar STEAM Fair">
+                                        <img width="800" height="380" src="../../assets/images/6-1.jpg" alt="Qatar STEAM Fair" />
+                                    </a>
+                                    <div class="post-body">
+                                        <h2 class="entxt"><a href="../../gallary/Qatar-STEAM-Fair.html">Qatar STEAM Fair:</a></h2>
+                                        <p class="entxt"><a href="no.html"  target="_blank" >Dr. Ehab Barakat (NFD FOUNDER) co-chairing the judges committee, played an important role in the scientific review committee, leading and training the judges through an induction session, appraising the wining projects nominated to Intel ISEF 2015 and preparing the Intel ISEF 2015 finalist.</a></p>
+                                    </div>
+                                </article>
+                            </li>
+                            <li onclick="gallary_magic(0)">
+                                <article class="article">
+                                    <a href="no.html"  target="_blank" title="Kuwait Science and Engineering Fair">
+                                        <img width="800" height="380" src="../logotrans.jpg" alt="Kuwait Science and Engineering Fair" />
+                                    </a>
+                                    <div class="post-body">
+                                        <h2 class="entxt"><a href="../../gallary/no.html">Kuwait Science and Engineering Fair:</a></h2>
+                                        <p class="entxt"><a href="no.html"  target="_blank" >NECTAR founder invited as trainer and co-chair for the judging committee.</a></p>
+                                    </div>
+                                </article>
+                            </li>
+                            <li onclick="gallary_magic(0)">
+                                <article class="article">
+                                    <a href="no.html"  target="_blank" title="Misr Elkhir Foundation">
+                                        <img width="800" height="380" src="../logotrans.jpg" alt="sMisr Elkhir Foundation" />
+                                    </a>
+                                    <div class="post-body">
+                                        <h2 class="entxt"><a href="../../gallary/no.htm">Misr Elkhir Foundation:</a></h2>
+                                        <p class="entxt"><a href="no.html"  target="_blank" >In January of 2015 , a financing concrete agreement has been signed to donate with The electronic program of the scientific competitions judging , which was created according to the suggestion of Dr. Ihab Barakat , the founder of NECTAR foundation , and he also designed the program and supervised on its making.</a></p>
+                                    </div>
+                                </article>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="more-link"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

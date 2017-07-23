@@ -1,0 +1,250 @@
+section {
+    background-image: url(board.jpg);
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    min-height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(border.png) 30 stretch;
+    -o-border-image: url(border.png) 30 stretch;
+    border-image: url(border.png) -0.1 stretch;
+    padding: 10px;
+    padding-top: 50px;
+}
+
+.td {
+    margin-left: 50px;
+}
+
+.td {
+    display: inline-block;
+    width: 250px;
+    float: left;
+}
+
+section div {
+    font-family: 'Coming Soon', cursive;
+    font-size: 24px;
+    color: #fff;
+    margin-top: 10px;
+    display: block;
+}
+
+h2 {
+    font-family: 'Coming Soon', cursive;
+    display: block;
+    width: 100%;
+    color: #5d91b7;
+    text-align: center;
+    font-weight: 900;
+    FONT-SIZE: 50px;
+}
+
+.sh {
+    box-shadow: 0px 0px 5px 5px gray;
+    width: 200px;
+    border-radius: 4px;
+}
+
+.example:hover {
+    box-shadow: 0 0 7px 7px rgba(0, 140, 186, 0.3), 0px 0px 5px 5px gray;
+    cursor: pointer;
+    opacity: 0.8;
+    z-index: 100;
+    background-color: #fff;
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+}
+
+.dabus {
+    position: relative;
+    margin-left: 25%;
+    opacity: 1;
+    z-index: 100;
+    top: 10px;
+    box-shadow: 0 0 0 0 !important;
+    cursor: default !important;
+}
+
+i {
+    color: red;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+.topright {
+    text-align: center;
+    min-width: 100%;
+}
+
+.topright .fa {
+    margin-top: -10px;
+    display: block;
+    margin-left: 450px;
+    margin-right: auto;
+}
+
+#showimg {
+    margin: auto;
+    min-height: 100%;
+    background: none;
+    opacity: 1;
+    position: fixed;
+    top: 0%;
+    z-index: 100;
+    display: none;
+    min-width: 100%;
+    overflow: scroll;
+}
+
+#showimg img {
+    border: 8px solid #fff;
+    border-radius: 10px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.td {
+    background: none;
+    border: 0px !important;
+}
+
+.schemadiv i {
+    margin-left: 60px;
+    color: #5d91b7;
+}
+
+.schemadiv {
+    margin-left: 60px;
+    margin-top: 30px;
+}
+
+.de {
+    position: relative;
+    top: 10px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    width: 160px;
+    margin-left: 15px;
+    color: transparent;
+    height: auto;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+.de p {
+    font-family: 'Coming Soon', cursive;
+    font-size: 0.6em;
+    margin-left: 5px;
+}
+
+@keyframes ex {
+    0% {
+        top: 1opx;
+        background-color: none;
+        color: transparent;
+    }
+    25% {
+        background-color: rgba(0, 140, 186, 0.5);
+        color: #fff;
+    }
+    100% {
+        top: -30px;
+        background-color: rgba(0, 140, 186, 1);
+        color: #fff;
+    }
+}
+
+@keyframes antiex {
+    from {
+        top: -30px;
+        background-color: none;
+        color: transparent;
+    }
+    to {
+        top: 10px;
+        background-color: none;
+        color: transparent;
+    }
+}
+
+figcaption {
+    /* display: none; */
+    /* height: 0; */
+    overflow: hidden;
+    transition: all 0.2s ease 0.5s;
+    display: block;
+    margin: auto;
+    width: 100%;
+    background-color: #fff;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    color: goldenrod;
+    padding-top: 10px;
+}
+
+#showimg img {
+    width: 600px;
+}
+
+#figtext {
+    display: inline;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+    top: -8px;
+}
+
+
+}
+.prev,
+.nxt {
+    margin: 0px;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    color: blue;
+}
+.prev:hover,
+.nxt:hover {
+    color: red;
+}
+.close {
+    color: #825a28;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 32px;
+}
+@media only screen and (min-width: 600px) {
+    #showimg img,
+    figcaption {
+        width: 600px;
+    }
+}

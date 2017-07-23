@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Nectar foundation</title>
+    <link rel="icon" href="../logotrans.jpg">
+    <link rel="stylesheet" id="font-awesome-four-css" href="../../../assets/css/font-awesome-4-menus/css/font-awesome.min.css" type="text/css" media="all">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../../assets/css/style.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../../../assets/css/colors.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../../../assets/css/animate-custom.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../../../assets/css/animations.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../../../assets/css/responsiveslides.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../../../assets/css/edit.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="responsiveslides-css" href="../../../assets/css/responsiveslides.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="reponsive-css" href="../../../assets/css/reponsive.min.css" type="text/css" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Lobster%7CReem+Kufi" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script async type="text/javascript" src="../../../assets/js/modernizr.custom.js"></script>
+    <script async type="text/javascript" src="../../../assets/js/jquery/jquery.min.js"></script>
+    <script async type="text/javascript" src="../../../assets/js/jquery/jquery-migrate.min.js"></script>
+    <script async type="text/javascript" src="../../../assets/js/foundation.min.js"></script>
+    <script type="text/javascript" src="../../../assets/js/modernizr.custom.js"></script>
+    <script async type="text/javascript" src="../../../assets/js/foundation/foundation.section.min.js"></script>
+    <script async type="text/javascript" src="../../../assets/js/responsiveslides.min.js"></script>
+    <script async type="text/javascript" src="../../../assets/js/scripts.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../../../assets/js/dropzone.min.js"></script>
+    <script src="ea.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var moha = 0;
+            if (moha == 0) {
+                $('body').click(function() {
+                    $.ajax({
+                        url: '../../ch.php',
+                        success: function(data) {
+                            if (data == 1) {
+                                sp = document.getElementsByClassName("sp");
+                                moha = 1;
+                                var i;
+                                for (i = 0; i < sp.length; i++) {
+                                    sp[i].style.visibility = "visible";
+                                }
+                            } else {
+                                sp = document.getElementsByClassName("sp");
+                                moha = 1;
+                                var i;
+                                for (i = 0; i < sp.length; i++) {
+                                    sp[i].style.visibility = "hidden";
+                                }
+                            }
+                        }
+
+                    });
+                });
+            }
+        });
+
+
+        $(document).ready(function() {
+            $('.fa-window-close').click(function() {
+                var e = $(this).parent().attr("id");
+                var max = $(this).parent().parent().attr("id");
+                alert("DS")
+                $.ajax({
+                    url: 'news_d.php',
+                    type: 'GET',
+                    data: {
+                        e: e,
+                        max: max
+                    },
+                    success: function(data) {
+                        alert(data);
+
+                    }
+                });
+                setTimeout(function() {
+                    location.reload();
+                }, 500);
+
+            })
+
+            $('.edSave').click(function() {
+                setTimeout(function() {
+                    location.reload();
+                }, 500);
+            })
+            $('#brn1').click(function() {
+                setTimeout(function() {
+                    location.reload();
+                }, 500);
+            })
+        })
+
+    </script>
+</head>
+
+<body bgcolor="#3495f3">
+    <style>
+        body {
+            background-color: #3495f3;
+        }
+        
+        table {
+            width: 100%;
+        }
+        
+        ul {
+            margin-top: 50px;
+        }
+        
+        #flot {
+            max-height: 400px;
+            overflow: scroll;
+        }
+
+    </style>
+    <button class="sp" style="background: #EE4400;z-index: 100;position: fixed;right: 0;"><a href="../../log_out.php">log out</a></button>
+    <ul id="p1">
+        <li id="a1">
+            <table>
+                <tr>
+                    <td>
+                        <figure>
+                            <img src="../../../assets/images/FLL.png" alt="FLL" width="100" height="100">
+                            <figcaption>FLL</figcaption>
+                        </figure>
+                    </td>
+                    <td>
+                        <h3>Fll</h3>
+                        <p>
+                            <p>
+                                <em>FIRST</em> LEGO League challenges kids to think like scientists and engineers. During the HYDRO DYNAMICS<sup>SM </sup>season, teams will choose and solve a real-world problem in the Project. They will also build, test, and program an autonomous robot using LEGO<sup>®</sup> MINDSTORMS<sup>®</sup> technology to solve a set of missions in the Robot Game. Throughout their experience, teams will operate under the <em>FIRST </em>LEGO League signature set of Core Values, celebrating discovery, teamwork, and Gracious Professionalism<sup>®</sup>.</p>..<a href="http://www.firstlegoleague.org/" target="_blank">(Click here to go to FLL page)</a>
+                    </td>
+                </tr>
+            </table>
+        </li>
+    </ul>
+</body>
+
+</html>

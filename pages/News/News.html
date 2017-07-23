@@ -1,0 +1,386 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>NECTAR foundation</title>
+    <link rel="icon" href="../../logotrans.jpg">
+    <link rel="stylesheet" href="../../assets/css/style.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../../assets/css/colors.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../../assets/css/mohannad.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="reponsive-css" href="../../assets/css/reponsive.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../../assets/css/edit.min.css" type="text/css" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="ea.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var moha = 0;
+            if (moha == 0) {
+                $('body').click(function() {
+                    $.ajax({
+                        url: '../ch.php',
+                        success: function(data) {
+                            if (data == 1) {
+                                sp = document.getElementsByClassName("sp");
+                                moha = 1;
+                                var i;
+                                for (i = 0; i < sp.length; i++) {
+                                    sp[i].style.visibility = "visible";
+                                }
+                            } else {
+                                sp = document.getElementsByClassName("sp");
+                                moha = 1;
+                                var i;
+                                for (i = 0; i < sp.length; i++) {
+                                    sp[i].style.visibility = "hidden";
+                                }
+                            }
+                        }
+
+                    });
+                });
+            }
+        });
+
+
+        $(document).ready(function() {
+            $('.fa-window-close').click(function() {
+                var e = $(this).parent().attr("id");
+                var max = $(this).parent().parent().attr("id");
+                alert("DS")
+                $.ajax({
+                    url: 'news_d.php',
+                    type: 'GET',
+                    data: {
+                        e: e,
+                        max: max
+                    },
+                    success: function(data) {
+                        alert(data);
+
+                    }
+                });
+                setTimeout(function() {
+                    location.reload();
+                }, 500);
+
+            })
+
+            $('.edSave').click(function() {
+                setTimeout(function() {
+                    location.reload();
+                }, 500);
+            })
+            $('#brn1').click(function() {
+                setTimeout(function() {
+                    location.reload();
+                }, 500);
+            })
+        })
+
+    </script>
+</head>
+
+<body>
+    <style>
+        table {
+            width: 100%;
+        }
+        
+        ul {
+            margin-top: 50px;
+        }
+        
+        #flot {
+            max-height: 400px;
+            overflow: scroll;
+        }
+
+    </style>
+    <button class="sp" style="background: #EE4400;z-index: 100;position: fixed;right: 0;"><a href="../../log_out.php">log out</a></button>
+    <section class="page-section News-page page-section-41 en" ; style="visibility: visible;min-height: 100%;height: auto;overflow-y: scroll;">
+        <div class="large-8" style="margin:auto;">
+            <ul id="p10">
+                <li id="a1">
+                    <i class="fa fa-ellipsis-v sp" aria-hidden="true"></i>
+                    <i class="fa fa-pencil-square-o sp" aria-hidden="true" onclick="edit(this)"></i>
+                    <i class="fa fa-window-close sp" aria-hidden="true" onclick=""></i>
+                    <br>
+                    <div class="button-container-2 edit_b">
+                        <span class="mas">Save</span><button class="edSave" type="button" name="Hover">Save</button>
+                    </div>
+                    <div class="button-container-1 edit_b">
+                        <span class="mas">Cancle</span><button onclick="edit_cancel(this)" type="button" name="Hover">Cancle</button>
+                    </div>
+                    <table>
+                        <tr>
+                            <td>
+                                <figure>
+                                    <img src="../logotrans.jpg" alt="UNESCO IBSP Program" width="100" height="100">
+                                    <figcaption>UNESCO IBSP Program<br> Date:Dec.2013</figcaption>
+                                </figure>
+                            </td>
+                            <td>
+                                <h3>UNESCO IBSP Program:</h3>
+                                <p>Prepared a comprehensive technical report for the science education internet portal. The portal will include different modules as Inquiry-Based science education, research methodology and projects, and basic science education.</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <hr class="about-hr">
+                </li>
+                <li id="a2">
+                    <i class="fa fa-ellipsis-v sp" aria-hidden="true"></i>
+                    <i class="fa fa-pencil-square-o sp" aria-hidden="true" onclick="edit(this)"></i>
+                    <i class="fa fa-window-close sp" aria-hidden="true" onclick=""></i>
+                    <br>
+                    <div class="button-container-2 edit_b">
+                        <span class="mas">Save</span><button class="edSave" type="button" name="Hover">Save</button>
+                    </div>
+                    <div class="button-container-1 edit_b">
+                        <span class="mas">Cancle</span><button onclick="edit_cancel(this)" type="button" name="Hover">Cancle</button>
+                    </div>
+                    <table>
+                        <tr>
+                            <td>
+                                <figure>
+                                    <img src="../../assets/images/Pennsylvania%20State%20University1.JPG" alt="USA Visit" width="100" height="100">
+                                    <figcaption>USA Visit<br> Date:Sep.2014</figcaption>
+                                </figure>
+                            </td>
+                            <td>
+                                <h3>USA Visit:</h3>
+                                <p>Visit the center for Nanotechnology Education and Utilization (CNEU) and the National Science Foundation’s (NSF) Nanotechnology Application and Career Knowledge (NACK) Network at the Pennsylvania State University, to discuss possible collaboration with the CNEU in developing graduate educational programs for students and technical staff in Egypt and Middle East. In addition, opportunities of promoting nanotechnology education in local universities have been explored.</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <hr class="about-hr">
+                </li>
+                <li id="a3">
+                    <i class="fa fa-ellipsis-v sp" aria-hidden="true"></i>
+                    <i class="fa fa-pencil-square-o sp" aria-hidden="true" onclick="edit(this)"></i>
+                    <i class="fa fa-window-close sp" aria-hidden="true" onclick=""></i>
+                    <br>
+                    <div class="button-container-2 edit_b">
+                        <span class="mas">Save</span><button class="edSave" type="button" name="Hover">Save</button>
+                    </div>
+                    <div class="button-container-1 edit_b">
+                        <span class="mas">Cancle</span><button onclick="edit_cancel(this)" type="button" name="Hover">Cancle</button>
+                    </div>
+                    <table>
+                        <tr>
+                            <td>
+                                <figure>
+                                    <img src="../../assets/images/2.jpg" alt="UNESCO / MOHE High Level Forum" width="100" height="100">
+                                    <figcaption>UNESCO / MOHE High Level Forum<br> Date:November2014,23<sup>rd</sup> </figcaption>
+                                </figure>
+                            </td>
+                            <td>
+                                <h3>UNESCO / MOHE High Level Forum:</h3>
+                                <p>NECTAR foundation represented the Egyptian specialized NGOs on Education and research field during the round table discussion about “Galvanizing Higher Education &amp; Scientific Research towards an Innovation Economy”</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <hr class="about-hr">
+                </li>
+                <li id="a4">
+                    <i class="fa fa-ellipsis-v sp" aria-hidden="true"></i>
+                    <i class="fa fa-pencil-square-o sp" aria-hidden="true" onclick="edit(this)"></i>
+                    <i class="fa fa-window-close sp" aria-hidden="true" onclick=""></i>
+                    <br>
+                    <div class="button-container-2 edit_b">
+                        <span class="mas">Save</span><button class="edSave" type="button" name="Hover">Save</button>
+                    </div>
+                    <div class="button-container-1 edit_b">
+                        <span class="mas">Cancle</span><button onclick="edit_cancel(this)" type="button" name="Hover">Cancle</button>
+                    </div>
+                    <table>
+                        <tr>
+                            <td>
+                                <figure>
+                                    <img src="../../assets/images/2.jpg" alt="UNESCO / MOHE High Level Forum" width="100" height="100">
+                                    <figcaption>UNESCO / MOHE High Level Forum <br> Date:November2014,24<sup>th</sup></figcaption>
+                                </figure>
+                            </td>
+                            <td>
+                                <h3>UNESCO / MOHE High Level Forum:</h3>
+                                <p>NECTAR foundation represented the Egyptian specialized NGOs on Education and research field during the round table discussion about “Galvanizing Education towards a Knowledge-based Economy"</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <hr class="about-hr">
+                </li>
+                <li id="a5">
+                    <i class="fa fa-ellipsis-v sp" aria-hidden="true"></i>
+                    <i class="fa fa-pencil-square-o sp" aria-hidden="true" onclick="edit(this)"></i>
+                    <i class="fa fa-window-close sp" aria-hidden="true" onclick=""></i>
+                    <br>
+                    <div class="button-container-2 edit_b">
+                        <span class="mas">Save</span><button class="edSave" type="button" name="Hover">Save</button>
+                    </div>
+                    <div class="button-container-1 edit_b">
+                        <span class="mas">Cancle</span><button onclick="edit_cancel(this)" type="button" name="Hover">Cancle</button>
+                    </div>
+                    <table>
+                        <tr>
+                            <td>
+                                <figure>
+                                    <img src="../logotrans.jpg" alt="ISC Arab – Qatar" width="100" height="100">
+                                    <figcaption>ISC Arab – Qatar <br> Date:November2014</figcaption>
+                                </figure>
+                            </td>
+                            <td>
+                                <h3>ISC Arab – Qatar:</h3>
+                                <p>Dr. Ehab Barakat (NFD FOUNDER) co-chairing the judges committee, leading and training the judges through an induction session, and nominated to winners.</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <hr class="about-hr">
+                </li>
+                <li id="a6">
+                    <i class="fa fa-ellipsis-v sp" aria-hidden="true"></i>
+                    <i class="fa fa-pencil-square-o sp" aria-hidden="true" onclick="edit(this)"></i>
+                    <i class="fa fa-window-close sp" aria-hidden="true" onclick=""></i>
+                    <br>
+                    <div class="button-container-2 edit_b">
+                        <span class="mas">Save</span><button class="edSave" type="button" name="Hover">Save</button>
+                    </div>
+                    <div class="button-container-1 edit_b">
+                        <span class="mas">Cancle</span><button onclick="edit_cancel(this)" type="button" name="Hover">Cancle</button>
+                    </div>
+                    <table>
+                        <tr>
+                            <td>
+                                <figure>
+                                    <img src="../../assets/images/Announcing%20winners.JPG" alt="Intel ISEF – Egypt" width="100" height="100">
+                                    <figcaption>Intel ISEF – Egypt<br> Date:Feb.2015</figcaption>
+                                </figure>
+                            </td>
+                            <td>
+                                <h3>Intel ISEF – Egypt:</h3>
+                                <p>NECTAR judging team assigned to manage and lead the judging committee, appraising the wining projects nominated to Intel ISEF 2015 and preparing the Intel ISEF 2015 finalist.</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <hr class="about-hr">
+                </li>
+                <li id="a7">
+                    <i class="fa fa-ellipsis-v sp" aria-hidden="true"></i>
+                    <i class="fa fa-pencil-square-o sp" aria-hidden="true" onclick="edit(this)"></i>
+                    <i class="fa fa-window-close sp" aria-hidden="true" onclick=""></i>
+                    <br>
+                    <div class="button-container-2 edit_b">
+                        <span class="mas">Save</span><button class="edSave" type="button" name="Hover">Save</button>
+                    </div>
+                    <div class="button-container-1 edit_b">
+                        <span class="mas">Cancle</span><button onclick="edit_cancel(this)" type="button" name="Hover">Cancle</button>
+                    </div>
+                    <table>
+                        <tr>
+                            <td>
+                                <figure>
+                                    <img src="../../assets/images/13.JPG" alt="Intel ISEF – Upper Egypt" width="100" height="100">
+                                    <figcaption>Intel ISEF – Upper Egypt<br>Date:Dec.2013</figcaption>
+                                </figure>
+                            </td>
+                            <td>
+                                <h3>Intel ISEF – Upper Egypt:</h3>
+                                <p>NECTAR judging team assigned to manage and lead the judging committee, appraising the wining projects nominated to Intel ISEF 2015 and preparing the Intel ISEF 2015 finalist.</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <hr class="about-hr">
+                </li>
+                <li id="a8">
+                    <i class="fa fa-ellipsis-v sp" aria-hidden="true"></i>
+                    <i class="fa fa-pencil-square-o sp" aria-hidden="true" onclick="edit(this)"></i>
+                    <i class="fa fa-window-close sp" aria-hidden="true" onclick=""></i>
+                    <br>
+                    <div class="button-container-2 edit_b">
+                        <span class="mas">Save</span><button class="edSave" type="button" name="Hover">Save</button>
+                    </div>
+                    <div class="button-container-1 edit_b">
+                        <span class="mas">Cancle</span><button onclick="edit_cancel(this)" type="button" name="Hover">Cancle</button>
+                    </div>
+                    <table>
+                        <tr>
+                            <td>
+                                <figure>
+                                    <img src="../../assets/images/6-1.jpg" alt="Qatar STEAM Fair" width="100" height="100">
+                                    <figcaption>Qatar STEAM Fair<br> Date:March.2015</figcaption>
+                                </figure>
+                            </td>
+                            <td>
+                                <h3>Qatar STEAM Fair:</h3>
+                                <p>Dr. Ehab Barakat (NFD FOUNDER) co-chairing the judges committee, played an important role in the scientific review committee, leading and training the judges through an induction session, appraising the wining projects nominated to Intel ISEF 2015 and preparing the Intel ISEF 2015 finalist.</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <hr class="about-hr">
+                </li>
+                <li id="a9">
+                    <i class="fa fa-ellipsis-v sp" aria-hidden="true"></i>
+                    <i class="fa fa-pencil-square-o sp" aria-hidden="true" onclick="edit(this)"></i>
+                    <i class="fa fa-window-close sp" aria-hidden="true" onclick=""></i>
+                    <br>
+                    <div class="button-container-2 edit_b">
+                        <span class="mas">Save</span><button class="edSave" type="button" name="Hover">Save</button>
+                    </div>
+                    <div class="button-container-1 edit_b">
+                        <span class="mas">Cancle</span><button onclick="edit_cancel(this)" type="button" name="Hover">Cancle</button>
+                    </div>
+                    <table>
+                        <tr>
+                            <td>
+                                <figure>
+                                    <img src="../logotrans.jpg" alt="Kuwait Science and Engineering Fair" width="100" height="100">
+                                    <figcaption>Kuwait Science and Engineering Fair<br>Date:April.2015</figcaption>
+                                </figure>
+                            </td>
+                            <td>
+                                <h3>Kuwait Science and Engineering Fair:</h3>
+                                <p>NECTAR founder invited as trainer and co-chair for the judging committee.</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <hr class="about-hr">
+                </li>
+                <li id="a10">
+                    <i class="fa fa-ellipsis-v sp" aria-hidden="true"></i>
+                    <i class="fa fa-pencil-square-o sp" aria-hidden="true" onclick="edit(this)"></i>
+                    <i class="fa fa-window-close sp" aria-hidden="true" onclick=""></i>
+                    <br>
+                    <div class="button-container-2 edit_b">
+                        <span class="mas">Save</span><button class="edSave" type="button" name="Hover">Save</button>
+                    </div>
+                    <div class="button-container-1 edit_b">
+                        <span class="mas">Cancle</span><button onclick="edit_cancel(this)" type="button" name="Hover">Cancle</button>
+                    </div>
+                    <table>
+                        <tr>
+                            <td>
+                                <figure>
+                                    <img src="../logotrans.jpg" alt="Misr Elkhir Foundation" width="100" height="100">
+                                    <figcaption>Misr Elkhir Foundation<br> Date:Jan.2015</figcaption>
+                                </figure>
+                            </td>
+                            <td>
+                                <h3>Misr Elkhir Foundation:</h3>
+                                <p>In January of 2015 , a financing concrete agreement has been signed to donate with The electronic program of the scientific competitions judging , which was created according to the suggestion of Dr. Ihab Barakat , the founder of NECTAR foundation , and he also designed the program and supervised on its making.</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <hr class="about-hr">
+                </li>
+            </ul>
+            <i class="fa fa-plus-circle sp" aria-hidden="true" onclick="dis()" id="add"></i>
+            <div id="flot">
+                <div>
+                    <form action="../../upload.php" class="dropzone" id="myDropzone"></form>
+                    <span>Name</span><input id="h_3" type="text"><br><span>figcaption</span><input id="figcaption" type="text"><br><span>Data</span><textarea id="par" type="text"></textarea><br><span>Link Data</span><textarea id="a" type="text"></textarea><br><span>Link</span><textarea id="asrc" type="text"></textarea><br><button onclick="brn()" id="brn1">Save</button>
+                    <button onclick="cancel()">Calncel</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
